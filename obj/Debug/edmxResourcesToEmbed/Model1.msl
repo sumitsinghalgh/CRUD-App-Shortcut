@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CRUD_MVC_ShortcutModelStoreContainer" CdmEntityContainer="CRUD_MVC_ShortcutEntities1">
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="CRUD_MVC_ShortcutModel.Employee">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="Emp_Name" ColumnName="Emp_Name" />
+          <ScalarProperty Name="Emp_Age" ColumnName="Emp_Age" />
+          <ScalarProperty Name="Emp_Designation" ColumnName="Emp_Designation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

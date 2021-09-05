@@ -1,0 +1,58 @@
+﻿@model IEnumerable<CRUD_Applications_Shortcut_Way.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/Bootstrap/bootstrap-grid.css" rel="stylesheet" type="text/css" />
+@*<script src="~/Scripts/modernizr-2.8.3.js"></script>*@
+@*<link href="~/Content/Bootstrap/bootstrap-grid.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Bootstrap/bootstrap-grid.css" rel="stylesheet" type="text/css" />*@
+@*<link href="~/Content/Bootstrap/bootstrap-grid.css" rel="stylesheet" type="text/css" />*@
+<link href="~/Content/Bootstrap/Site.css" rel="stylesheet" type="text/css" />
+
+
+<script src="~/Content/JS/bootstrap.min.js"></script>
+<script src="~/Content/JS/bootstrap.js"></script>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_Designation)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emp_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emp_Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emp_Designation)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.EmployeeID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.EmployeeID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.EmployeeID })
+            </td>
+        </tr>
+    }
+
+</table>
+
